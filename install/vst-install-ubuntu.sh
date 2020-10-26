@@ -464,7 +464,7 @@ apt-key add /tmp/nginx_signing.key
 
 # Installing vesta repo
 echo "deb http://$RHOST/ $codename vesta" > $apt/vesta.list
-wget $CHOST/deb_signing.key -O deb_signing.key
+wget "https://raw.githubusercontent.com/CGsama/vesta-arm/master/install/ubuntu/18.04/deb_signing.key" -O deb_signing.key
 apt-key add deb_signing.key
 
 
