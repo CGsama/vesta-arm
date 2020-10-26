@@ -7,8 +7,8 @@
 #----------------------------------------------------------#
 export PATH=$PATH:/sbin
 export DEBIAN_FRONTEND=noninteractive
-RHOST='vesta-arm.s3.nl-ams.scw.cloud'
-CHOST='vesta-arm.s3.nl-ams.scw.cloud'
+RHOST='raw.githubusercontent.com/CGsama/vesta-arm/master'
+CHOST='raw.githubusercontent.com/CGsama/vesta-arm/master'
 VERSION='ubuntu'
 VESTA='/usr/local/vesta'
 memory=$(grep 'MemTotal' /proc/meminfo |tr ' ' '\n' |grep [0-9])
@@ -249,7 +249,7 @@ if [ ! -e '/usr/bin/wget' ]; then
 fi
 
 # Checking repository availability
-wget -q "https://vesta-arm.s3.nl-ams.scw.cloud/deb_signing.key" -O /dev/null
+wget -q "https://raw.githubusercontent.com/CGsama/vesta-arm/master/install/ubuntu/18.04/deb_signing.key" -O /dev/null
 check_result $? "No access to Vesta ARM repository"
 
 # Checking installed packages
